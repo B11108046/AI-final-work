@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>騎識Moto - 機車型號辨識</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>騎識Moto - 機車型號辨識系統</h2>
+    <p>找到屬於自己的夢想情車！</p>
+    <p>上傳照片或拍照，幫你找出適合的機車型號</p>
+  </header>
+
+  <main>
+    <div class="recognition-box">
+      <div class="upload-section">
+        <input type="file" id="imageInput" accept=".jpg,.jpeg,.png,.gif,.bmp,.webp">
+        <br><br>
+        <img id="preview" width="300" style="display: none;" />
+      </div>
+
+      <div id="result" class="result-box">
+        <h2>辨識結果：</h2>
+        <p id="modelName">請上傳圖片後進行辨識</p>
+        <div id="modelInfo"></div>
+      </div>
+    </div>
+
+    <div class="button-box">
+      <a href="info.html" class="button">查看全部機車型號介紹</a>
+    </div>
+  </main>
+
+  <!-- ✅ 必要 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>品牌車款介紹</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      background-color: #D32F2F;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1f1c2c;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    header p {
+      margin: 5px 0 15px;
+    }
+    .link-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 15px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .brand-box {
+      margin: 20px;
+      padding: 20px;
+      background-color: #2b2b2b;
+      border-radius: 12px;
+    }
+    h1 {
+      color: white;
+    }
+    h3 {
+      color: #ffa726;
+    }
+    li {
+      margin-bottom: 16px;
+    }
+    img {
+      width: 200px;
+      height: auto;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: 2px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>品牌車款介紹</h1>
+    <p>依品牌分類，一目瞭然！</p>
+    <a href="index.html" class="button">返回辨識頁</a>
+  </header>
+
+  <main id="infoContent">
+    <!-- 資料由 script.js 動態載入 -->
+  </main>
+
+  <div id="overlay" class="overlay"></div>
+  <div id="modelDetails" class="model-details"></div>
+
+  <script>
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('infoContent');
+
+        for (let brand in data) {
+          const brandSection = document.createElement('div');
+          brandSection.innerHTML = `<h2>${brand}</h2>`;
+          
+          const brandBox = document.createElement('div');
+          brandBox.className = 'brand-box';
+
+          data[brand].forEach(bike => {
+            const card = document.createElement('div');
+            card.className = 'model-card';
+            card.innerHTML = `
+              <img src="images/${brand}/${bike.name}.jpg" alt="${bike.name}">
+              <div class="model-card-content">
+                <h3>${bike.name}</h3>
+              </div>
+            `;
+
+            card.addEventListener('click', () => {
+              const details = document.getElementById('modelDetails');
+              details.innerHTML = `
+                <h2>${bike.name}</h2>
+                <img src="images/${brand}/${bike.name}.jpg" alt="${bike.name}">
+                <p>${bike.desc}</p>
+                <p><strong>特色：</strong>${bike.features.join(', ')}</p>
+                <button class="button" onclick="closeDetails()">關閉</button>
+              `;
+              
+              details.classList.add('active');
+              document.getElementById('overlay').classList.add('active');
+            });
+
+            brandBox.appendChild(card);
+          });
+
+          brandSection.appendChild(brandBox);
+          container.appendChild(brandSection);
+        }
+      });
+
+    function closeDetails() {
+      document.getElementById('modelDetails').classList.remove('active');
+      document.getElementById('overlay').classList.remove('active');
+    }
+
+    document.getElementById('overlay').addEventListener('click', closeDetails);
+  </script>
+</body>
+</html>

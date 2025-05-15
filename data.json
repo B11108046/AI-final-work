@@ -1,0 +1,78 @@
+{
+  "SYM": [
+    {
+      "name": "SL",
+      "desc": "JET SL 是一款運動型速克達，搭載四衝程水冷引擎，提供優異的操控性能。",
+      "features": ["ABS", "LED大燈", "液晶儀表"]
+    },
+    {
+      "name": "DRG",
+      "desc": "DRGBT 擁有跑格外型，榮獲2024年紅點設計大獎，展現極限不設限的精神。",
+      "features": ["水冷引擎", "TCS循跡系統", "LED燈具"]
+    },
+    {
+      "name": "MMBCU",
+      "desc": "MMBCU 主打跨界設計，結合歐風外型與實用性能，適合多元騎乘需求。",
+      "features": ["BOSCH ABS", "TCS", "防滑座墊"]
+    },
+    {
+      "name": "CLBCU",
+      "desc": "CLBCU 以輕巧靈活為主打，搭配高效能引擎，適合都會通勤使用。",
+      "features": ["省油", "輕量化設計", "LED頭燈"]
+    },
+    {
+      "name": "迪爵",
+      "desc": "迪爵125 搭載新世代EnMIS引擎，提供潔淨、省油且耐用的騎乘體驗。",
+      "features": ["雙火星塞", "極致散熱系統", "提升動力輸出"]
+    }
+  ],
+  "YAMAHA": [
+    {
+      "name": "BWS",
+      "desc": "BWS 擁有越野風格與獨特造型，適合喜歡個性的你。",
+      "features": ["高車身", "大燈", "粗輪胎"]
+    },
+    {
+      "name": "Force2.0",
+      "desc": "Force 2.0 採用光柵感設計，搭載Y-Connect App，提供高機能美學。",
+      "features": ["QC 3.0 USB", "LED燈組", "運動化懸吊"]
+    },
+    {
+      "name": "勁戰",
+      "desc": "CYGNUS GRYPHUS 擁有智慧型Smart Key與4.3吋全彩TFT智慧儀表，提升騎乘便利性。",
+      "features": ["水冷引擎", "循跡控制系統", "超大置物空間"]
+    },
+    {
+      "name": "Limi",
+      "desc": "Limi 是一款外型可愛的女性車款，輕巧好騎。",
+      "features": ["輕量車架", "省油", "椅墊低"]
+    },
+    {
+      "name": "VINOORA125",
+      "desc": "VINOORA125特仕車，造型吸睛，限量版收藏價值高。",
+      "features": ["聯名設計", "限量塗裝", "造型特別"]
+    }
+  ],
+  "KYMCO": [
+    {
+      "name": "KRV",
+      "desc": "KRV MOTO 180 搭載175.1cc水冷引擎，提供強勁動力與穩定操控。",
+      "features": ["CVT變速", "ABS", "鋁合金輪圈"]
+    },
+    {
+      "name": "RTS",
+      "desc": "RTS R 165 擁有高性能與舒適騎乘體驗，外型流線。",
+      "features": ["雙懸吊", "大置物空間", "ABS"]
+    },
+    {
+      "name": "Yogurt",
+      "desc": "Yogurt 125 主打都會女性市場，外型時尚，騎乘輕鬆。",
+      "features": ["輕量化設計", "省油", "LED燈具"]
+    },
+    {
+      "name": "Like125",
+      "desc": "Like125 擁有復古外觀，適合風格騎士。",
+      "features": ["LED圓燈", "大椅墊", "電子儀表"]
+    }
+  ]
+}
